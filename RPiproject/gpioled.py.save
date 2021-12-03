@@ -1,0 +1,29 @@
+import RPi.GPIO as GPIO
+import time
+GPIO.setmode(GPIO.BOARD)
+
+LED_RED = 2
+LED_GREEN = 3
+LED_BLUE = 4
+
+GPIO.setup(LED, GPIO.OUT, initial=GPIO.LOW)
+try :
+	while 1:
+		
+		#RED
+		GPIO.output(3, GPIO.HIGH)
+		time.sleep(3)
+		GPIO.output(3, GPIO.LOW)
+		time.sleep(1)
+
+		#BLUE
+		GPIO.output(4, GPIO.HIGH)
+		time.sleep(1		)
+GPIO.output(4, GPIO.LOW)
+time.sleep(1)
+
+#RED
+GPIO.output(2, GPIO.HIGH)
+time.sleep(2)
+GPIO.output(2, GPIO.LOW)
+time.sleep(1)
